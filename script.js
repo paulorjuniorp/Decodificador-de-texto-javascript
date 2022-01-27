@@ -31,7 +31,6 @@ function encrypt(){
     }
 
     textoCriptografado = arrayEntrada.join('')
-    console.log(textoCriptografado)
 
     msg = document.querySelector("#msg");
     msg.value = textoCriptografado
@@ -48,13 +47,16 @@ btn.addEventListener('click', function (e){
 
 let btnCopy = document.querySelector("#btn-copy");
 let textoCopiado;
+let novoTexto;
 
 btnCopy.addEventListener('click', function(e){
     e.preventDefault();
 
     textoCopiado = document.querySelector("#msg").value;
 
-    entrada.value = textoCopiado;
+    novoTexto = document.querySelector(".text-input");
+
+    novoTexto.value = textoCopiado;
 })
 
 
